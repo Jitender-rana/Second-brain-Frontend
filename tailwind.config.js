@@ -1,3 +1,5 @@
+import { transform } from 'typescript';
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
@@ -19,6 +21,17 @@ export default {
           600: "#7164c0",
 
         }
+      },
+      keyframes: {
+        appear:{
+          from : { opacity: 0, scale: 0.5 },
+          to: { opacity: 1, scale: 1 },
+          
+          
+        }
+      },
+      animation: {
+        "appear": 'appear 2s ease-out forwards',
       }
     },
   },
