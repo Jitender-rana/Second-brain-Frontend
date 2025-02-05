@@ -16,7 +16,7 @@ export function ShareBrain(){
     const hash=params.hash;
     
     async function fetchShareBrain(){
-        const response=await axios.get(`${Backend_Url}/brain/${hash}`);
+        const response=await axios.get(`${Backend_Url}brain/${hash}`);
         if(response.data.data){
         setcontents(response.data.data);
         return;

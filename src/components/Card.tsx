@@ -18,7 +18,7 @@ export const Card=({title,url,type,uniqueKey,onDelete,canDelete}: Cardprops)=>{
     async function deletefun() {
         try {
             console.log(uniqueKey);
-            const response = await axios.put(`${Backend_Url}/content/delete-content`, {
+            const response = await axios.put(`${Backend_Url}content/delete-content`, {
                 contentId: uniqueKey,
 
             },{

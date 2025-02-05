@@ -16,7 +16,7 @@ export function Signin(){
         setdoingsignin(true);
         const email=emailRef.current?.value;
         const password=passwordRef.current?.value;
-        const response= await axios.post(`${Backend_Url}/user/signin`,{
+        const response= await axios.post(`${Backend_Url}user/signin`,{
             email: email,
             password: password,
         })
@@ -43,7 +43,7 @@ export function Signin(){
     return <div className="h-screen w-screen bg-gray-200 flex justify-center items-center border">
         <div className="bg-white rounded-xl min-h-48 p-8">
             <div className="flex justify-center text-3xl text-gray-600 mb-4 font-sans"><h1>Signin</h1></div>
-            <Input  reference={emailRef} marginleft={true} placeholder="xyz@gmail.com" labelname="Email" type="text"></Input>
+            <Input  reference={emailRef}  placeholder="xyz@gmail.com" labelname="Email" type="text"></Input>
             <Input reference={passwordRef} placeholder="******" labelname="Password" type="password"></Input>
             <div className="  flex justify-end text-purple-600 text-xs p-2  underline underline-offset-4 hover:no-underline"><Link to="/signup">Create account</Link></div>
             <div className="flex justify-center mt-6">

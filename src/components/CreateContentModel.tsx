@@ -47,7 +47,7 @@ export function CreateContent({open,onClose}: CreateContentprops){
         const title=titleRef.current?.value;
         const link=linkRef.current?.value;
         const token=localStorage.getItem("token");
-        const response=await axios.post(`${Backend_Url}/content/create-content`,{
+        const response=await axios.post(`${Backend_Url}content/create-content`,{
             title: title,
             link: link,
             type: type,

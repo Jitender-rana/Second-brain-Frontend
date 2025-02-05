@@ -11,7 +11,7 @@ type ContentItem = {
 export function useContent(){
     const [contents,setcontents]=useState<ContentItem[]>([]);
     async function refresh(){
-        const response=await axios.get(`${Backend_Url}/content/contents`,{
+        const response=await axios.get(`${Backend_Url}content/contents`,{
             headers:{
                 authorization: `Bearer ${localStorage.getItem("token")}`
             }
