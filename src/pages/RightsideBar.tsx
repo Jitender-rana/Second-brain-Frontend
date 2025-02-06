@@ -82,7 +82,7 @@ export function RightsideBar() {
     <div className="sm:ml-72 ml-16 block bg-gray-100 min-h-screen p-4 border-2 animate-appear">
     <CreateContent open={showModal} onClose={()=>{setshowModal(false)}}/>
     <ShareBrainModal open={showBrainModal} onClose={()=>{setshowBrainModal(false)}}  url={urlRef.current}/>
-    <div className="flex justify-end gap-4 sm:ml-0 ml-16"> 
+    <div className="flex justify-end gap-4 sm:flex-row flex-col"> 
     <Button   onClick={()=>{
       console.log("the modal value is"+showModal);
       setshowModal(true);
